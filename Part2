@@ -26,17 +26,59 @@ import shutil
 #copy2() = copy() + copies metadata (File's creation and motification times)
 #shutil.copyfile('test.txt', 'C\\Users\\Cakow\\Desktop\\copy.txt') #src.dst
 
-source = "test.txt"
-destination = "C\\Users\\Cakow\\Desktop\\test.txt"
+#source = "test.txt"
+#destination = "C\\Users\\Cakow\\Desktop\\test.txt"
+#try:
+#    if os.path.exists(destination):
+#        print("There is already a file there")
+#    else:
+#        os.replace(source,destination)
+#        print(source+" was moved")
+#except FileNotFoundError:
+#    print(source+ " was not found")
 
-try:
-    if os.path.exists(destination):
-        print("There is already a file there")
-    else:
-        os.replace(source,destination)
-        print(source+" was moved")
-except FileNotFoundError:
-    print(source+ " was not found")
+#path = 'test.txt'
+#try:    
+#    os.remove(path)
+#    os.rmdir(path)
+#    shutil.rmtree(path)
+#except FileNotFoundError:
+#    print("That file was not found")
+#except PermissionError:
+#    print("You do not have permission")
+#except OSError:
+#    print("You cannot delete using that function")
+#else:
+#    print(path+" was deleted")
+
+from Classes import Car
+car_1 = Car("Chevy", "Corvette", "2022", "Black")
+car_2 = Car("Ford", "Mustang", "2021", "White")
+#print(car_1.make)
+#print(car_1.model)
+#print(car_1.year)
+#print(car_1.color)
+car_1.wheels = 2
+car_1.drive()
+car_1.stop()
+
+print(Car.wheels)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

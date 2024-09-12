@@ -156,7 +156,13 @@ import random
 #finally:
 #    print("This will always execute")
 
- 
+#MODULES
+#import _____
+#import_____ as ____
+#import *
+#____.function()
+#help("modules")
+
 
 
 
