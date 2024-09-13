@@ -1,0 +1,145 @@
+import os
+import shutil
+#path = "C\\Users\\Cakow\\Desktop\\test.txt"
+#if os.path.exixsts(path):
+#    print("That location exist")
+#    if os.path.isfile(path):
+#        print("That is a file")
+#    elif os.path.isdir(path):
+#        print("That is a directory")
+#else:
+#    print("That location doesn't exist")
+
+#try:
+#    with open('test.txt') as file:
+#       print(file.read())
+#    print(file.closed)
+#except FileNotFoundError:
+#    print("That file was not found")
+
+#text = "Hello World\nThis is amazing"
+#with open('test.txt','r','w','a') as file:
+#    file.write(text)
+
+#copyfile() = copies contents
+#copy() = copyfile() + permission mod + destination can be a directory
+#copy2() = copy() + copies metadata (File's creation and motification times)
+#shutil.copyfile('test.txt', 'C\\Users\\Cakow\\Desktop\\copy.txt') #src.dst
+
+#source = "test.txt"
+#destination = "C\\Users\\Cakow\\Desktop\\test.txt"
+#try:
+#    if os.path.exists(destination):
+#        print("There is already a file there")
+#    else:
+#        os.replace(source,destination)
+#        print(source+" was moved")
+#except FileNotFoundError:
+#    print(source+ " was not found")
+
+#path = 'test.txt'
+#try:    
+#    os.remove(path)
+#    os.rmdir(path)
+#    shutil.rmtree(path)
+#except FileNotFoundError:
+#    print("That file was not found")
+#except PermissionError:
+#    print("You do not have permission")
+#except OSError:
+#    print("You cannot delete using that function")
+#else:
+#    print(path+" was deleted")
+
+#from Classes import Car
+#car_1 = Car("Chevy", "Corvette", "2022", "Black")
+#car_2 = Car("Ford", "Mustang", "2021", "White")
+#print(car_1.make)
+#print(car_1.model)
+#print(car_1.year)
+#print(car_1.color)
+#car_1.wheels = 2
+#car_1.drive()
+#car_1.stop()
+#print(Car.wheels)
+
+
+#print(happy := True)
+
+#foods = list()
+#while True:
+#    food = input("What food do you like")
+#    if food == "quit":
+#        break
+#    food.append(food)
+#while food := input("What food do you like:") != "quit":
+#    foods.append(food)
+
+
+#print("Hello")
+#hi = hello
+#hi()
+#say = print
+#say("Good")
+
+#def quiet(text):
+#    return text.lower()
+
+#def loud(text):
+#    return text.upper()
+#def hello(func):
+#    text = func("Hello")
+#    print(text)
+#hello(loud)
+
+#def divisor(x):
+#    def dividend(y):
+#        return y / x
+#    return dividend
+#divide = divisor(2)
+#print(divide(10))
+
+#lamba functions
+
+#def double(x):
+#    return x * 2
+#print(double(5))
+#double = lambda x:x * 2
+#multiply = lambda x, y: x * y
+#add = lambda x, y, z: x + y + z
+#full_name = lambda first_name, last_name: first_name +" "+ last_name
+#age_check = lambda age:True if age >= 18 else False
+#print(double(5))
+#print(multiply(5,6))
+
+#sort
+
+#students = ["squidward", "spongebob", "patrick"]
+#students.sort()
+#students.sort(reverse=True)
+#sorted_students = sorted(students,reverse=True)
+#for i in sorted_students:
+#    print(i)
+#kids = [("squidward", "F", 54), ("spongebob", "A", 34), ("patrick", "D", 98)]
+#grade = lambda grades:grades[1]
+#kids.sort(key=grade)
+#sorted_kids = sorted(kids,key=grade)
+#for i in kids:
+#    print(i)
+
+#map
+
+#store = [("shirt",50),("pants",60),("jacket",80)]
+#to_euros = lambda data: (data[0],data[1]*0.82)
+#store_euros = list(map(to_euros, store))
+#for i in store_euros:
+#    print(i)
+
+#filter
+
+#store = [("shirt",50),("pants",60),("jacket",80)]
+#price = lambda data:data[1] >= 51
+#clothes = list(filter(price,store))
+#for i in clothes:
+#    print(i)
+

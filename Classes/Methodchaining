@@ -1,0 +1,128 @@
+class Car:
+    
+    def drive(self):
+        print("This" +self.model+" car is driving")
+        return self
+    def stop(self):
+        print("This car is stopped")
+        return self
+    def brake(self):
+        print("You step on the brakes")
+        return self
+    def turn_off(self):
+        print("You turn off the engine")
+        return self
+
+car = Car()
+
+car.turn_drive().stop()
+car.brake().turn_off()
+car.drive().stop().brake().turn_off()
+
+
+# Super() = Function used to give access to methods of a parent class
+# Returns a temporary object of parent class when used
+class Rectangle:
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+class Square(Rectangle):
+    
+    def __init__(self, length, width):
+        super().__init__(length, width)
+
+    def area(self):
+        return self.length*self.width
+    
+class Cube(Rectangle):
+
+    def __init__(self, length, width, height):
+        super().__init__(length, width)
+        self.height = height
+        def volume(self):
+            return self.length*self.width*self.height
+
+square = Square(3,3)
+cube = Cube(3,3,3)
+
+from abc import ABC
+class Vehicle(ABC):
+    @abstractmethod
+    def go(self):
+        pass
+    @abstractmethod
+    def stop(self):
+        pass
+class Car(vehicle):
+
+    def go(self):
+        print("You drive a car")
+
+class Motorcycle(Vehicle):
+
+    def go(self):
+        print("You drive a motorcycle")
+
+vehicle = Vehicle()
+
+class Car:
+
+    color = None
+
+class Motorcycle:
+
+    color = None
+
+def change_color(car,color):
+
+    car.color = color
+
+car_1 = Car()
+car_2 = Car()
+car_3 = Car()
+
+change_color(car_1,"red")
+change_color(car_2,"white")
+change_color(car_3,"blue")
+
+print(car_1.color)
+print(car_2.color)
+print(car_3.color)
+
+class Duck:
+
+    def walk(self):
+        print("This duck is walking")
+
+class Chicken:
+
+    def walk(self):
+        print("This chicken is walking")
+
+class Person():
+
+    def catch(self, duck):
+        duck.walk()
+        duck.talk()
+        print("You caught a duck")
+
+duck = Duck()
+chicken = Chicken()
+person = Person()
+
+person.catch(chicken)
+person.catch(duck)
+
+
+
+
+
+
+
+
+
+
+
+
