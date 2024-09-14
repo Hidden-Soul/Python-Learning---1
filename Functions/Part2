@@ -143,3 +143,119 @@ import shutil
 #for i in clothes:
 #    print(i)
 
+#reduce
+
+#import functools
+#letters = ["H","E","L","L","O"]
+#word = functools.reduce(lambda x, y:x + y, letters)
+#print(word)
+#factorial = [5,4,3,2,1]
+#result = functools.reduce(lambda x,y:x*y:factorial)
+#print(result)
+
+#list comprehension
+
+#squares = []
+#for i in range(1,11):
+#    squares.append(i *i)
+#print(squares)
+#squares = [i * i for i in range(1,11)]
+#print(squares)
+#passed_students = list(filter(lambda x: x >= 60, students))
+#passed_students = [i for i in students if i >= 60]
+#passed_students = [i if i >= 60 else "FAILED" for i in students ]
+#print(passed_students)
+
+#dictionary comprehensions
+
+#cities_in_F = {'New York': 32, 'Boston': 75}
+#cities_in_C = {key: ((value-32)*(5/9)) for (key,value) in cities_in_F.items()}
+#weather = {'New York': "Sunny", "Boston": "Sunny"}
+#sunny_weather = {key: value for (key,value) in weather.items() if value == "sunny"}
+#print(sunny_weather)
+#desc_cities = {key: ("WARM" if value >= 40 else "COLD") for (key,value) in cities_in_C.items()}
+#print(desc_cities)
+#def check_temp(value):
+#    if value >= 70:
+#        return "HOT"
+#    elif 69 >= value >= 40:
+#        return "WARM"
+#    else:
+#        return "COLD"
+#desc_cities = {key: check_temp(value) for (key,value) in cities_in_C.items()}
+
+#zip function
+
+#usernames = ["Dude", "Bro","Mister"]
+#passwords = ("Password","abc","hi")
+#login_date = ["2/2","2/3","2/4"]
+#users = dict(list(zip(usernames, passwords, login_date)))
+#for key,value in users.items():
+#    print(key)
+
+#if __name__ == '__main__':
+#    print("Running directly")
+#else:
+#    print("Running indirectly")
+
+#time module
+
+#import time
+#print(time.ctime(0))
+#print(time.time())
+#print(time.ctime(time.time()))
+#time_object = time.localtime()
+#print(time_object)
+#local_time = time.strftime("%B $d %Y %H:%M:%S", time_object)
+#print(local_time)
+#time_object = time.gmtime()
+#time_string = "20 April, 2020"
+#time.strptime(time_string,"%d %B, %Y")
+#time_tuple = (2020, 4, 20, 2, 3, 2, 3, 4, 0)
+#time_string = time.asctime(time_tuple)
+#time_string = time.mktime(time_tuple)
+#time.asctime(time_tuple)
+
+#Multithreading:IO bound task
+
+#import threading
+#import time
+#print(threading.active_count())
+#print(threading.enumerate())
+#print(time.perf_counter())
+#def eat_breakfast():
+#    time.sleep(3)
+#    ("You eat breakfast")
+#def drink_coffee():
+#    time.sleep(4)
+#    print("You drink coffee")
+#def study():
+#    time.sleep(4)
+#    print("You finish studying")
+#x = threading.Thread(target=eat_breakfast.args())
+#x.start()
+#y = threading.Thread(target=drink_coffee.args())
+#y.start()
+#z = threading.Thread(target=study.args())
+#z.start()
+#x.join()
+#y.join()
+#z.join()
+
+#daemon threads
+
+import threading
+import time
+answer = input("Do you wish to exit:")
+def timer():
+    print()
+    count = 0
+    while True:
+        time.sleep(1)
+        count += 1
+        print("logged in for:",count,"seconds")
+x = threading.Thread(target=timer, daemon=True)
+x.start()
+x.setDaemon(True)
+print(x.isDaemon())
+
