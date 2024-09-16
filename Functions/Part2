@@ -386,41 +386,104 @@ import shutil
 
 #radio buttons
 
+#from tkinter import *
+#food = ["pizza","hamburger","hotdog"]
+#def order():
+#    if x.get() == 0:
+#        print("You order pizza")
+#    elif x.get == 1:
+#        print("You ordered a hamburger")
+#    elif x.get == 2:
+#        print("You ordered a hotdog")
+#    else:
+#        print("huh")
+#window = Tk()
+#x = IntVar()
+#for index in range(len(food)):
+#    radiobutton = Radiobutton(window,
+#                              text=food[index], #text to radio button
+#                              variable=x, #groups radio buttons together if they share the same variable
+#                              value=index, #assigns each radio button a different value
+#                              indicatoron=0, #eliminates circle indicators
+#                              width=375,
+#                              command=order) 
+#    radiobutton.config()
+#    radiobutton.pack(anchor=W)
+#window.mainloop()
+
+#scale
+
+#from tkinter import *
+#def submit():
+#    print("THis temp is: "+ str(scale.get())+ " degrees C")
+#window = Tk()
+#scale = Scale(window,
+#              from_=100,
+#              to=0,
+#              text='submit',
+#               command=submit,
+#               orient=VERTICAL,
+#               tickintervals = 10, #Adds numeric indicators
+#                showvalue = 0, #hide current value
+#                resolution = 5,
+#                troughcolor = 'blue')
+#scale.set((scale['from']-scale['to'])/2+scale['to'])
+#scale.pack()
+#button = Button(window)
+#window.mainloop()
+
+#listbox
+
+#def submit():
+#    food = []
+#    for index in listbox.curselection():
+#        food.insert(index,listbox.get(index))
+#    print("You have ordered: ")
+#    listbox.get(listbox.curselection())
+#def add():
+#    listbox.insert(listbox.size(),entryBox.get())
+#    listbox.config(height=listbox.size())
+#def delete():
+#    for index in reversed(listbox.curselection()):
+#        listbox.delete(index)
+#    listbox.delete(listbox.curselection())
+#    list.config(height=listbox.size())
+#from tkinter import *
+#window = Tk()
+#listbox = Listbox(window,
+#                  bg='black',
+#                  width=12)
+#listbox.pack()
+#listbox.insert(1,"pizza")
+#listbox.insert(2,"pasta")
+#listbox.insert(3,"bread")
+#listbox.insert(4,"soup")
+#listbox.insert(5,"salad")
+#listbox.config(height=listbox.size())
+#entryBox = Entry(window)
+#entryBox.pack()
+#submitButton = Button(window,text="submit",command=submit)
+#submitButton.pack()
+#addButton = Button(window,text="add",command=add)
+#addButton.pack()
+#deleteButton = Button(window,text="delete",command=delete)
+#deleteButton.pack()
+#window.mainloop()
+
+#open a file
+
 from tkinter import *
-
-food = ["pizza","hamburger","hotdog"]
-def order():
-    if x.get() == 0:
-        print("You order pizza")
-    elif x.get == 1:
-        print("You ordered a hamburger")
-    elif x.get == 2:
-        print("You ordered a hotdog")
-    else:
-        print("huh")
+from tkinter import filedialog
+def openFile():
+    filedialog.askopenfilename(initialdir="",
+                               title="Open file",
+                               filetypes= (("text files", "*.txt"),("all files","*")))
+    file = open(filepath, 'r')
+    print(file.read())
+    file.close()
 window = Tk()
-x = IntVar()
-for index in range(len(food)):
-    radiobutton = Radiobutton(window,
-                              text=food[index], #text to radio button
-                              variable=x, #groups radio buttons together if they share the same variable
-                              value=index, #assigns each radio button a different value
-                              indicatoron=0, #eliminates circle indicators
-                              width=375,
-                              command=order) 
-    radiobutton.config()
-    radiobutton.pack(anchor=W)
+button = Button(text="Open",command=openFile)
 window.mainloop()
-
-
-
-
-
-
-
-
-
-
 
 
 
